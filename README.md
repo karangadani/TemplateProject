@@ -17,4 +17,6 @@ To Run this Project on your System:
   - Add Email and Password Credentials in Project1/Project1/settings.py (make sure to enable 'less sercure app' of that email)
   - In Cmd of that file location run - 'python start_project.py'
   - Run "http://127.0.0.1:8000/home/" in any browser.
+
+
 ![Screenshot 2021-06-10 113326](https://user-images.githubusercontent.com/52932210/121476994-ebc1b880-c9e4-11eb-91b6-561e103ea4b0.jpg)
