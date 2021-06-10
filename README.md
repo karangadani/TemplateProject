@@ -9,7 +9,7 @@ Functions:
   - Password Reset
   - Email Verification
   - Password Change
- --** For Authentication I had used Djnago Library - "Django-allauth" -> https://django-allauth.readthedocs.io/en/latest/installation.html  **
+  - ** For Authentication I had used Djnago Library - "Django-allauth" -> https://django-allauth.readthedocs.io/en/latest/installation.html  **
 
 To Run this Project on your System:
   - Clone this repository 
