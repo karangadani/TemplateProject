@@ -24,7 +24,7 @@
                     <div class="col-md-push-3 col-xs-6">
                         <div class="tb-login-form res">
                             <h5 class="tb-title">Create a new account</h5>
-                                <form class="signup" id="signup_form" method="post" action="" >
+                                <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}" >
                                 {% csrf_token %}
                                 <p class="checkout-coupon top log a-an">
                                     <label class="l-contact">
@@ -74,58 +74,6 @@
 		<!-- login  content section end -->
 
 
-<script src="{% static 'js/vendor/jquery.min.js' %}"></script>
-<script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
-<script src="{% static 'js/jquery.validate.min.js' %}"></script>
-<script src="{% static 'js/sweetalert.min.js' %}"></script>
-<script>
-    $('#signup_form').validate({
-        rules : {
-            login: "required",
-            email: {required:true,
-                    email:true},
-            password1: "required",
-            password2: "required",
-        },
-        messages: {
-            login: 'Please enter your Username',
-            email: 'Please enter your email',
-            password1: 'Please enter your password',
-            password2: {required: 'Please enter your Password again'},
-        }
-    });
 
-    $("form").submit(function (event) {
-        event.preventDefault();
-        var form = $(this);
-        $.ajax({
-                url: form.attr("data-validate-username-url"),
-                data: form.serialize(),
-                type: 'post',
-                context: form,
-                dataType: 'json',
-                success: function(data) {
-                    if(data.content) {
-                        console.log(data);
-                        if (data.is_taken) {
-                            swal({'title': 'Username already taken', 'text': data.error_message, icon: "warning"});
-                            if (!data.user) {
-                                swal({'title': 'Invalid email', 'text': data.error_message, icon: "warning"});
-                            } else {
-                                this.off('submit');
-                                this.submit();
-                            }
-                        } else {
-                            console.log(data);
-                            swal({'title': 'Invalid Details', 'text': data.error_message, icon: "warning"});
-                        }
-                    }
-                else{
-                    console.log(data);
-                    }
-                }
-        });
-    });
-</script>
 
 {% endblock %}	
