@@ -1,3 +1,4 @@
+
 This is Django Template Project which i learned during my Internship at Silverwing Technology Pvt. Ltd. 
 
 This is simple Django project in which i had loaded Html Templates and Configure all its backend with Django Famework.
@@ -15,3 +16,4 @@ To Run this Project on your System:
   - Clone this repository 
   - Add Email and Password Credentials in Project1/Project1/settings.py (make sure to enable 'less sercure app' of that email)
   - In Cmd of that file location run - 'python start_project.py'
+![Screenshot 2021-06-10 113326](https://user-images.githubusercontent.com/52932210/121476994-ebc1b880-c9e4-11eb-91b6-561e103ea4b0.jpg)
